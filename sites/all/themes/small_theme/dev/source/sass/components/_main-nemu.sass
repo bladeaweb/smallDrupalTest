@@ -1,0 +1,66 @@
+.block-system-main-menu
+  position: static
+  .content
+    text-align: right
+    .menu-toggler
+      +user-select(none)
+      display: inline-block
+      line-height: $header-height
+      .menu-icon
+        display: inline-block
+        position: relative
+        top: 50%
+        width: 1.5rem
+        height: 1rem
+        border-top: 2px solid
+        border-bottom: 2px solid
+        +transform(traslateY(-50%))
+        &:before
+          content: ""
+          position: absolute
+          width: 100%
+          border-top: 2px solid
+          top: 50%
+          left: 0
+          +transform(translateY(-50%))
+      +breakpoint(m)
+        display: none
+  ul.menu
+    text-align: right
+    padding: 0
+    position: absolute
+    background: $background
+    right: 0
+    left: 0
+    box-shadow: 0 1px 1px 0 rgba($text-color, 0.3)
+    opacity: 0
+    top: 0
+    visibility: hidden
+    +transition(0.3s)
+    z-index: -5
+    &.open
+      opacity: 1
+      visibility: visible
+      top: 100%
+      z-index: 10
+    +breakpoint(m)
+      position: relative
+      visibility: visible
+      opacity: 1
+      top: auto
+      right: auto
+      left: auto
+      z-index: auto
+      box-shadow: none
+    li
+      padding-top: 0
+      list-style: none
+      display: block
+      margin: 0.5rem
+      +breakpoint(m)
+        margin: 0
+        display: inline-block
+        line-height: $header-height
+      a
+        &.active
+          color: $text-color

@@ -1,0 +1,53 @@
+.container
+  +container-fixed()
+  +breakpoint(m)
+    width: $container-sm
+  +breakpoint(l)
+    width: $container-md
+  +breakpoint(xl)
+    width: $container-lg
+
+.section-main
+  +make-row()
+  &>.main-content
+    &-one-sidebar
+      +make-xs-column(12)
+      +breakpoint(l)
+        +make-md-column(9)
+    &-two-sidebars
+      +make-xs-column(12)
+      +breakpoint(l)
+        +make-md-column(9)
+    &-no-sidebar
+      +make-xs-column(12)
+  &>.sidebar
+    +make-xs-column(12)
+    +breakpoint(l)
+      +make-md-column(3)
+
+.section-header
+  +make-row()
+  .header-site-info
+    +make-xs-column(7)
+    +breakpoint(m)
+      +make-sm-column(5)
+    +breakpoint(l)
+      +make-md-column(4)
+  .header-second
+    +make-xs-column(5)
+    +breakpoint(m)
+      +make-sm-column(7)
+    +breakpoint(l)
+      +make-md-column(8)
+    position: static !important
+
+.region-footer
+  +make-row()
+  .block-block-1
+    +breakpoint(m)
+      +make-sm-column(5)
+  .block-system-main-menu
+    display: none
+    +breakpoint(m)
+      display: block
+      +make-sm-column(7)

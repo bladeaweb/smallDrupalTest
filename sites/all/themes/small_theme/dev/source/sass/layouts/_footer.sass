@@ -1,0 +1,31 @@
+.footer
+  background: $default-dark
+  color: $default-light
+  text-align: center
+  height: $footer-height
+  margin-top: 1rem
+  font-size: $footer-height / 2.5
+  line-height: $footer-height
+  font-weight: $fw-l
+  a
+    color: $default-light
+  p
+    margin: 0
+  .block-block-1
+    +breakpoint(m)
+      text-align: left
+  .block-system-main-menu
+    display: none
+    .menu
+      background: none
+      margin: 0
+      li
+        line-height: $footer-height
+      a
+        color: $default-light
+        line-height: $footer-height
+        &.active
+          color: $default-light
+          opacity: 0.6
+    +breakpoint(m)
+      display: block

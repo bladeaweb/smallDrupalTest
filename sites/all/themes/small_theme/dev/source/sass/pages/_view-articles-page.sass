@@ -1,0 +1,19 @@
+.view-display-id-page
+  .view-content
+    +breakpoint(m)
+      margin: 0 rem(-15)
+      +display(flex)
+      +flex-direction(row)
+      +flex-wrap(wrap)
+      +justify-content(flex-start)
+      +align-content(stretch)
+    .views-row
+      box-sizing: border-box
+      margin: rem(15) 0
+      +breakpoint(m)
+        margin: rem(15) rem(15)
+        +flex(1 1 50%)
+        max-width: calc(50% - 30px)
+      +breakpoint(l)
+        +flex(1 1 33.33%)
+        max-width: calc(33.33% - 30px)

@@ -1,0 +1,35 @@
+.paragraphs-item-image-grid
+  .mfp
+    &-gallery-image
+      margin: 0 -0.5vw
+      +breakpoint(s)
+        +display(flex)
+        +flex-wrap(wrap)
+        +justify-content(space-between)
+        +align-content(flex-start)
+        +flex-direction(column)
+        +flex-flow(row wrap)
+    &-item
+      max-width: 100%
+      margin: .5vw
+      outline: none
+      display: block
+      +breakpoint(s)
+        +display(flex)
+        +flex(row)
+        +justify-content(center)
+        +align-content(center)
+        height: $paragraphs-grid-image-height
+        +flex(0 1 auto)
+        &:hover
+          .mfp-thumbnail
+            +transform(scale(1.05))
+    &-thumbnail
+      width: 100% !important
+      height: auto !important
+      max-width: 100%
+      +transition(0.3s)
+      +breakpoint(s)
+        width: auto !important
+        height: 100% !important
+        max-width: none

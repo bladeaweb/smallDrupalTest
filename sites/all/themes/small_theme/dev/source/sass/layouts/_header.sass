@@ -1,0 +1,16 @@
+.header
+  width: 100%
+  height: $header-height
+  z-index: 10
+  background: rgba($background, 0.9)
+  margin-bottom: 1rem
+  position: relative
+  box-shadow: 0 1px 1px 0 rgba($text-color, 0.3)
+  .site-name
+    line-height: $header-height
+    color: $link-color
+    font-size: $header-height / 3
+    +breakpoint(s)
+      font-size: $header-height / 2
+    a
+      text-decoration: none

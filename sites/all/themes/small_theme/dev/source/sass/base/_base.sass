@@ -1,0 +1,21 @@
+*
+  box-sizing: border-box
+html,
+body
+  width: 100%
+  height: 100%
+  margin: 0
+  padding: 0
+body
+  background: $background
+  color: $text-color
+  min-width: $min-window-width
+a
+  color: $link-color
+  text-decoration: none
+  &:hover
+    text-decoration: underline
+  &.active
+    color: $text-color
+.clearfix
+  +clearfix()

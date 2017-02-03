@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the Simple Drupal Test preRelise feature.
+ */
+
+include_once 'simple_drupal_test_prerelise.features.inc';

@@ -1,0 +1,8 @@
+name = Small Drupal test Theme
+description = The theme created to show Alexander Sharkov work's skills with Drupal 7
+package = a-web
+version = 1.0.0
+core = 7.x
+
+stylesheets[all][] = styles/style.min.css
+scripts[] = js/custom.js
